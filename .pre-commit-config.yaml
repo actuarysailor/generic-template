@@ -21,7 +21,7 @@ repos:
     hooks:
       - id: markdownlint
         args: ['--fix']
-        files: \.(md|markdown)$
+        exclude: '^CHANGELOG\.md$'
 
   # JSON formatting
   - repo: https://github.com/pre-commit/mirrors-prettier
@@ -31,21 +31,8 @@ repos:
         types: [json]
         args: ['--write']
 
-  # JavaScript/Node.js linting (if you have JS files)
-  - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: v8.51.0
-    hooks:
-      - id: eslint
-        files: \.(js|ts)$
-        additional_dependencies: [eslint@8.51.0]
-
-  # Custom hook for README generator test
-  - repo: local
+  # README Generator validation
+  - repo: https://github.com/actuarysailor/pre-commit-readme-generator
+    rev: fix/enable-npm-publishing # v1.1.0
     hooks:
       - id: readme-generator-test
-        name: Test README Generator
-        entry: npm
-        args: ['run', 'test:readme-generator']
-        language: system
-        files: '^(BLANK_README\.md|configs/.*\.json|scripts/generate-readme\.js)$'
-        pass_filenames: false
