@@ -96,22 +96,34 @@ See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
     {{/sections.getting_started.enabled}}
     <!-- SECTION:getting_started:END -->
     <!-- SECTION:usage:START -->
-    {{#sections.usage.enabled}}<li><a href="#usage">Usage</a></li>{{/sections.usage.enabled}}
+    {{#sections.usage.enabled}}
+    <li><a href="#usage">Usage</a></li>
+    {{/sections.usage.enabled}}
     <!-- SECTION:usage:END -->
     <!-- SECTION:roadmap:START -->
-    {{#sections.roadmap.enabled}}<li><a href="#roadmap">Roadmap</a></li>{{/sections.roadmap.enabled}}
+    {{#sections.roadmap.enabled}}
+    <li><a href="#roadmap">Roadmap</a></li>
+    {{/sections.roadmap.enabled}}
     <!-- SECTION:roadmap:END -->
     <!-- SECTION:contributing:START -->
-    {{#sections.contributing.enabled}}<li><a href="#contributing">Contributing</a></li>{{/sections.contributing.enabled}}
+    {{#sections.contributing.enabled}}
+    <li><a href="#contributing">Contributing</a></li>
+    {{/sections.contributing.enabled}}
     <!-- SECTION:contributing:END -->
     <!-- SECTION:license:START -->
-    {{#sections.license.enabled}}<li><a href="#license">License</a></li>{{/sections.license.enabled}}
+    {{#sections.license.enabled}}
+    <li><a href="#license">License</a></li>
+    {{/sections.license.enabled}}
     <!-- SECTION:license:END -->
     <!-- SECTION:contact:START -->
-    {{#sections.contact.enabled}}<li><a href="#contact">Contact</a></li>{{/sections.contact.enabled}}
+    {{#sections.contact.enabled}}
+    <li><a href="#contact">Contact</a></li>
+    {{/sections.contact.enabled}}
     <!-- SECTION:contact:END -->
     <!-- SECTION:acknowledgments:START -->
-    {{#sections.acknowledgments.enabled}}<li><a href="#acknowledgments">Acknowledgments</a></li>{{/sections.acknowledgments.enabled}}
+    {{#sections.acknowledgments.enabled}}
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    {{/sections.acknowledgments.enabled}}
     <!-- SECTION:acknowledgments:END -->
     <li><a href="docs/FAQ.md">FAQ</a></li>
   </ol>
@@ -132,17 +144,19 @@ See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <!-- markdownlint-disable MD022 -->
 <!-- SECTION:built_with:START -->
 {{#sections.built_with.enabled}}
-<!-- markdownlint-disable MD022 MD052 MD032 -->
 ### Built With
+<!-- markdownlint-enable MD022 -->
 
 This section should list any major frameworks/libraries used to bootstrap your
 project. Leave any add-ons/plugins for the acknowledgements section. Here are a
 few examples.
 
+<!-- markdownlint-disable MD052 MD032 -->
 {{#sections.built_with.frameworks}}
 - [![{{name}}][{{name}}.shield]][{{name}}-url]
 {{/sections.built_with.frameworks}}
-<!-- markdownlint-enable MD022 MD052 MD032 -->
+<!-- markdownlint-enable MD052 MD032 -->
+<!-- markdownlint-disable MD022 -->
 {{/sections.built_with.enabled}}
 <!-- SECTION:built_with:END -->
 {{/sections.about.enabled}}
@@ -171,8 +185,8 @@ to install them.
   ```sh
   {{command}}
   ```
-{{/sections.getting_started.prerequisites}}
 
+{{/sections.getting_started.prerequisites}}
 ### Installation
 
 _Below is an example of how you can instruct your audience on installing and
@@ -273,8 +287,7 @@ create a pull request. You can also simply open an issue with the tag
 
 ## License
 
-Distributed under the {{repository.license}}. See `{{repository.license_file}}`
-for more information.
+Distributed under the {{repository.license}}. See `{{repository.license_file}}` for more information.
 
 {{/sections.license.enabled}}
 <!-- SECTION:license:END -->
@@ -286,7 +299,6 @@ for more information.
 
 ## Contact
 
-<!-- markdownlint-disable MD055 MD056 -->
 | | |
 |:---:|:---|
 | <img src="https://github.com/{{repository.github_username}}.png" alt="{{contact.name}}" width="50" height="50" style="border-radius: 50%;"> | **{{contact.name}}** |
@@ -294,8 +306,6 @@ for more information.
 | 🐙 | [@{{repository.github_username}}](https://github.com/{{repository.github_username}}) |
 {{#each contact.socials}}{{#if enabled}}| {{icon}} | [{{platform}}]({{url}}) |
 {{/if}}{{/each}}
-<!-- markdownlint-enable MD055 MD056 -->
-
 **Project Link:** [https://github.com/{{repository.github_username}}/{{repository.repo_name}}](https://github.com/{{repository.github_username}}/{{repository.repo_name}})
 {{/sections.contact.enabled}}
 <!-- SECTION:contact:END -->
