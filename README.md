@@ -250,8 +250,7 @@ create a pull request. You can also simply open an issue with the tag
 
 ## License
 
-Distributed under the Unlicense License. See `LICENSE.txt`
-for more information.
+Distributed under the Unlicense License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
